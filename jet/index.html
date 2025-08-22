@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky jet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <!-- Анимированные облака на фоне -->
+    <div class="clouds-container">
+        <img class="obloko" src="images/obl.svg" alt="cloud">
+        <img class="obloko2" src="images/obl.svg" alt="cloud">
+    </div>
+
+    <!-- Логотипы сверху -->
+    <div class="header">
+        <img class="logo-1win" src="images/1win_logo.png" alt="1win logo">
+        <img class="logo-luckyjet" src="images/Lucky.svg" alt="LUCKYJET logo">
+    </div>
+
+    <!-- Основной блок, включающий игру и панель управления -->
+    <div class="main-content">
+        <!-- Блок с iframe игры -->
+        <div class="game-container">
+            <iframe id="myIframe" src="https://1play.gamedev-tech.cc/lucky_grm/vgs/?b=13ca193b012adf3edad096e8cb4a2742ff50743259f6b855297551c087b5549ce82c6e08bb39ad746a9ffb8f2c0a81344c9c9a6c6e7dd346142d101087ec130c41a5dbe550a5ba8ffd691c31e2eccdc14e420a17642f76da3828b5eaac42a554e4119b544c76007436274c73767880efcbf09fcaa9cfbab0382a18729683434a944dc442231355e301a0b1fe8764bd21014bca77ad95f958198542ab.6eadb4a0761c268cee1ac5fa4cb9fd80.077dee8d-c923-4c02-9bee-757573662e69&language=en&pid=1win&pik=01961b11-5b8b-7023-bd73-12bb2ed716a5" scrolling="no"></iframe>
+        </div>
+
+        <!-- Блок для вывода сигнала "Waiting..." или результата -->
+        <div class="signal-box">
+            <span id="signalText">Waiting...</span>
+        </div>
+
+        <!-- Контейнер для кнопок -->
+        <div class="button-container">
+            <button id="getSignalBtn" class="btn">Get Signal</button>
+            <button class="btn" onclick="history.back()">Back to menu</button>
+        </div>
+    </div>
+
+    <!-- ИЗМЕНЕНИЕ: Добавлена HTML-структура для TG уведомления -->
+    <div id="notification-container" class="notification-container">
+        <a href="https://t.me/tripX_bot" target="_blank" class="liquid-crystal-bubble">
+            <div class="notification-content">
+                <div class="icon-container">
+                    <img src="tg.png" alt="Telegram">
+                </div>
+                <span class="notification-text" id="notification-username"></span>
+            </div>
+        </a>
+        <div class="crystal-reflection">
+            <div class="liquid-crystal-bubble"></div>
+        </div>
+    </div>
+    <!-- КОНЕЦ БЛОКА УВЕДОМЛЕНИЯ -->
+
+    <script src="script.js"></script>
+</body>
+</html>
